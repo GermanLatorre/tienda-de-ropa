@@ -1,12 +1,11 @@
+import Item from "../Item/Item";
 
-import Item from "../Item/Item"
-const ItemList = ({products}) => {
+
+const ItemList = ({productos}) => {
   return (
       <ul>
-        {products.map((producto) => (
-        <Item producto={producto}/>
-        
-    ))}
+        {productos.map((prod)=>(<Item producto={prod} key={prod.title}/> ))};
+      <h1>hola</h1>
     </ul>
   );
 };

@@ -1,6 +1,7 @@
 
 import './style.css';
 import CartWidget from '../CartWidget/CartWidget';
+import { NavLink } from 'react-router-dom';
 
 export const NavBar = () => {
   return (
@@ -8,7 +9,8 @@ export const NavBar = () => {
     <div>logo</div>
     <div>
       <ul className="options">
-        <li>Buzos</li>
+        <li><NavLink to="/" className={({ isActive }) => isActive ? "active": "inactive"}>INICIO</NavLink></li>
+        <li><NavLink to="/category/electronics" className={({ isActive }) => isActive ? "active": "inactive"}>ELECTRONICA</NavLink></li>
         <li>Remeras</li>
         <li>Pantalones</li>
         <li>Bermudas</li>
@@ -23,3 +25,4 @@ export const NavBar = () => {
 };
 
 export default NavBar;
+

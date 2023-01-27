@@ -1,12 +1,18 @@
+import ItemCount from "../ItemCount/ItemCount";
+import "./style.css";
+
+
 const Item = ({producto}) => {
+  console.log(producto);
   return (
-  <li key ={producto.id}>
-    <img alt={producto.title} src={producto.image}/>
-    <h2>{producto.title}</h2>
-    <h3>{producto.category}</h3>
-    <h3>{producto.description}</h3>
-  </li>
-  );
+    <li className="card">
+        <div>
+          <img src= {producto.image} alt={producto.title} />
+            <h1>{producto.title}</h1>
+        </div>
+        <ItemCount/>
+    </li>
+  )
 };
 
-export default Item
+export default Item;

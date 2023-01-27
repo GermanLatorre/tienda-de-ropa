@@ -16,3 +16,9 @@
 .option li {
     margin-left: 40px;
 }
+.active{
+  color: blue;
+}
+.inactive{
+  color: burlywood;
+}
